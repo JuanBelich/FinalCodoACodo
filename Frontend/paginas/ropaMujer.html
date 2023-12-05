@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <label for="check">|||</label>
+        <input type="checkbox" id="check">
+        <nav class="barra-celu">
+            <a href="./login.html">Login</a>
+            <a href="../index.html">Inicio</a>
+            <a href="./nostotros.html">Nosotros</a>
+            <a href="./electronica.html">Productos</a>
+        </nav>
+        <nav class="barra-pc">
+            <a href="./login.html">Login</a>
+            <a href="../index.html">Inicio</a>
+            <a href="./nostotros.html">Nosotros</a>
+            <a href="./electronica.html">Productos</a>
+        </nav>
+    </header>
+    <div class="product-container" id="lista-container">
+
+    </div>
+    <script>
+        let ropaM= [];
+        const listaElectContainer = document.getElementById("lista-container");
+        fetch("https://fakestoreapi.com/products/category/women's clothing")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                ropaM = data
+                for (let i = 0; i < data.length; i++) {
+                    let ul=document.createElement("ul");
+                    let title=document.createElement("li");
+                    let price=document.createElement("li");
+                    let description=document.createElement("li");
+                    let category=document.createElement("li");
+                    let imagen=document.createElement("li");
+                    let img=document.createElement("img");
+                    let rating=document.createElement("li");
+                    ul.classList.add("card-product");
+                    title.classList.add("card-title");
+                    price.classList.add("card-price");
+                    description.classList.add("card-description");
+                    category.classList.add("card-category");
+                    imagen.classList.add("card-img-container");
+                    rating.classList.add("card-rating");
+
+                    img.src=data[i].image;
+                    imagen.appendChild(img);
+                    title.innerHTML=data[i].title;
+                    price.innerHTML=data[i].price;
+                    description.innerHTML=`<p class="card-txt">${data[i].description} </p><a onclick="verMas()" id="verMas">Ver mas</a>`; 
+                    category.innerHTML=data[i].category;
+                    rating.innerHTML=data[i].rating.rate;
+                    ul.appendChild(title);
+                    ul.appendChild(imagen);
+                    ul.appendChild(description);
+                    ul.appendChild(category);
+                    ul.appendChild(rating);
+                    ul.appendChild(price);
+                    listaElectContainer.appendChild(ul);
+                }
+            })
+            // const verMas=document.getElementById("verMas");
+            const txt=document.querySelector(".card-txt");
+    </script>
+</body>
+</html>
