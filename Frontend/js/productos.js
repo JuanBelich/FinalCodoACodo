@@ -3,8 +3,7 @@ const { createApp } = Vue
     data() {
       return {
         productos:[],
-        // url:"https://fakestoreapi.com/products/category/electronics",
-        url:'http://127.0.0.1:5000/productos', 
+        url:'https://jbelich.pythonanywhere.com/productos', 
         // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
          // si ya lo subieron a pythonanywhere
         error:false,

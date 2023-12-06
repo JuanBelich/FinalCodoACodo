@@ -11,7 +11,7 @@ const { createApp } = Vue
         stock:0,
         precio:0,
         // url:'https://fakestoreapi.com/products/category/electronics'+id,
-        url:'http://127.0.0.1:5000/productos/'+id,
+        url:'https://jbelich.pythonanywhere.com/productos/'+id,
         }  
     },
     methods: {
@@ -47,7 +47,7 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./electronica.html"; // navega a productos.html          
+                    window.location.href = "./productos.html"; // navega a productos.html          
                 })
                 .catch(err => {
                     console.error(err);
