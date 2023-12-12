@@ -10,6 +10,15 @@ Antes de comenzar, asegúrate de tener instalados los siguientes elementos:
 - Python: [Descargar Python](https://www.python.org/)
 - Flask: Puedes instalarlo con el siguiente comando: `pip install flask`
 - Dependencias de Python: Ejecuta `pip install -r requirements.txt` en la carpeta del proyecto.
+## Aplicacion levantada en la nube
+La aplicación back-end estara disponible en [https://jbelich.pythonanywhere.com/productos](https://jbelich.pythonanywhere.com/productos).
+La aplicación front-end estara disponible en [https://enchanting-mooncake-fd8940.netlify.app/](https://enchanting-mooncake-fd8940.netlify.app/).
+
+### Acceso al login
+
+mail: admin@admin
+password:admin
+
 
 ## Configuración del Entorno Frontend
 
