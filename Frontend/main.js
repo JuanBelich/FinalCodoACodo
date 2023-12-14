@@ -37,7 +37,9 @@ let joyas=[];
 let electronica=[];
 let ropaH=[];
 let ropaM=[];
-fetch("https://fakestoreapi.com/products/category/jewelery")
+///productos/categoria/jewelery
+//http://127.0.0.1:5000/productos/categoria/jewelery
+fetch("http://127.0.0.1:5000/productos/categoria/jewelery")
     .then(function (response) {
         return response.json();
     })
@@ -46,7 +48,8 @@ fetch("https://fakestoreapi.com/products/category/jewelery")
         imgJewelery.src=joyas[0].image;
         console.log(joyas);
     });
-fetch("https://fakestoreapi.com/products/category/electronics")
+//http://127.0.0.1:5000/productos/categoria/electronics
+fetch("http://127.0.0.1:5000/productos/categoria/electronics")
     .then(function (response) {
         return response.json();
     })
@@ -55,7 +58,8 @@ fetch("https://fakestoreapi.com/products/category/electronics")
         imgElect.src=electronica[0].image;
         console.log(electronica);
     })
-fetch("https://fakestoreapi.com/products/category/men's clothing")
+//http://127.0.0.1:5000/productos/categoria/men's clothing
+fetch("http://127.0.0.1:5000/productos/categoria/men's clothing")
     .then(function (response) {
         return response.json();
     })
@@ -64,7 +68,8 @@ fetch("https://fakestoreapi.com/products/category/men's clothing")
         imgMen.src=ropaH[1].image;
         console.log(ropaH);
     })
-fetch("https://fakestoreapi.com/products/category/women's clothing")
+//http://127.0.0.1:5000/productos/categoria/women's clothing
+fetch("http://127.0.0.1:5000/productos/categoria/women's clothing")
     .then(function (response) {
         return response.json();
     })
